@@ -1,0 +1,59 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link href="https://fonts.googleapis.com/css?family=Ropa+Sans" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!--[if IE]>
+    <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+    <![endif]-->
+
+    <h1>Carousel test</h1>
+
+    <div class="carousel-container" 
+        data-component="carousel" 
+        data-search="beautiful+landscape" 
+        data-template="#carousel-template"
+        data-template-item="#carousel-item-template"
+        data-template-next="#carousel-next"
+        data-template-prev="#carousel-prev"
+        data-count="10">
+
+        <!-- Single picture fallback for cases where JS isn't enabled/errors-->
+        <picture>
+            <source srcset="https://pixabay.com/get/e835b60d20f6093ed1584d05fb1d4f90e671e2d31cac104490f7c478a1ebbcb0_640.jpg"
+                media="(min-width: 640px)">
+            <img src="https://cdn.pixabay.com/photo/2015/12/01/20/28/green-1072828_150.jpg" width="640" height="360" alt="A forest in dappled sunlight" />
+        </picture>
+    </div>
+
+    <template id="carousel-template">
+        <div class="carousel-wrapper">
+            <ul class="carousel">
+                <li class="carousel__item" id="carousel-item-template">
+                    <picture id="carousel-item-picture" class="carousel__picture">
+                        <source srcset="" media="(min-width: 640px)">
+                        <img class="carousel__image" src="" width="640" height="360" alt="A forest in dappled sunlight" />
+                    </picture>
+                    <h2 class="carousel__subtitle" id="carousel-item-title"></h2>
+                </li>
+            </ul>
+
+            <div class="pagination">
+                <button class="button pagination__control" id="carousel-prev">Prev</button>
+                <button class="button pagination__control" id="carousel-next">Next</button>
+            </div>
+        </div>
+    </template>
+
+    <script src="index.js" type="module"></script>
+</body>
+</html>
