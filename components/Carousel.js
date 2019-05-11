@@ -88,7 +88,6 @@ export default class Carousel {
     }
 
     position(){
-        console.log('here');
         const { width } = this.bounds;
 
         const transform = `translate3d(${(width/2) + (200 * -this.selected) - 200/2}px,0,0)`;
