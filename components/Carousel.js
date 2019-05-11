@@ -90,6 +90,10 @@ export default class Carousel {
     position(){
         const { width } = this.bounds;
 
+        // Crude positioning based on:
+        // centre point of container element (width/2)
+        // index of selected item * its width
+        // an offset of half item width to centre it in viewport.
         const transform = `translate3d(${(width/2) + (200 * -this.selected) - 200/2}px,0,0)`;
 
         this.list.style.transform = transform;
